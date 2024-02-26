@@ -53,6 +53,44 @@ public class convertitore extends Application{
 			}
 		}
 		
+		if(base==16) {
+			while (numero!=0) {
+				posto=numero-((numero/base)*base);
+				
+				if(posto<10) {
+					convertito+=posto+" ";
+					numero=numero/base;
+				}
+				
+				if(posto>=10) {
+					if(posto==10) {
+						convertito+="A"+" ";
+						numero=numero/base;
+					}
+					if(posto==11) {
+						convertito+="B"+" ";
+						numero=numero/base;
+					}
+					if(posto==12) {
+						convertito+="C"+" ";
+						numero=numero/base;
+					}
+					if(posto==13) {
+						convertito+="D"+" ";
+						numero=numero/base;
+					}
+					if(posto==14) {
+						convertito+="E"+" ";
+						numero=numero/base;
+					}
+					if(posto==15) {
+						convertito+="F"+" ";
+						numero=numero/base;
+					}
+				}
+			}
+		}
+		
 		String inverti[] = convertito.split(" ");
 		convertito="";
 		
